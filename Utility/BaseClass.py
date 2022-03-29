@@ -20,8 +20,11 @@ class BaseClass:
     def click_on_element(self, by_locator):
         self.driver.find_element(by_locator).click()
 
-    def get_elements(self, by_locator):
-        self.driver.find_elements(by_locator)
-
     def get_element(self, by_locator):
-        return self.driver.find_element(by_locator)
+        return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator))
+
+    def is_element_displayed(self, by_locator):
+        element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator))
+        return bool(element)
+
+

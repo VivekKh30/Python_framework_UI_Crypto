@@ -6,14 +6,13 @@ Structure-
 
 How to Run- 
 
-- Clone this repository from github, import it to Pycharm (or any other IDE).
+- Clone this repository from github, import it to Pycharm (or any other supporting IDE).
 - To execute all the tests run "py.test" command from terminal
 - To execute particular test run py.test "test_name" from terminal
 
 Improvements:
 
 - Tests are currently running sequentially, some changes may required to run them in parallel
-- Logging can be improved.
 - Reporting and logging can be added.
 
 
